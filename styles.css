@@ -1,0 +1,93 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+    background-color: #222;
+    color: white;
+    text-align: right;
+    padding: 20px;
+    font-size: 2em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: #333;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn.operator {
+    background-color: yellow;
+    color: black;
+}
+
+.btn.equals {
+    grid-column: span 4;
+    background-color: #00cc66;
+}
+
+.btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 5px #666;
+}
+
+.btn:active::after {
+    content: attr(data-key);
+    position: absolute;
+    top: -30px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+@media (max-width: 600px) {
+    .display {
+        padding: 15px;
+        font-size: 1.5em;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+
+    .buttons {
+        gap: 5px;
+    }
+}
