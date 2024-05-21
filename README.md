@@ -1,5 +1,5 @@
 # Calculator
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4469f05b-c1fb-40b6-afb7-66393e299387/deploy-status)](https://app.netlify.com/sites/brian-shifoko-calculator/deploys)
 This is a simple, responsive calculator built using HTML, CSS, and JavaScript. It features a modern design with 3D effect buttons and supports both mouse and keyboard input. The project was created by **Brian Shifoko**.
 
 ## Features
