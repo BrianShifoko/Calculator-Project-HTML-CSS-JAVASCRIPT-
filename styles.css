@@ -91,3 +91,65 @@ body {
         gap: 5px;
     }
 }
+.btn.shift {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+.btn.shift:hover {
+    background-color: darkorange;
+}
+.btn.scientific {
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2em;
+}
+
+.btn.scientific:hover {
+    background-color: darkblue;
+}
+
+.btn.control {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+.btn.control[data-key="off"] {
+    background-color: red;
+}
+
+.btn.control[data-key="ans"] {
+    background-color: purple;
+}
+
+.btn.control:hover {
+    background-color: darkgreen;
+}
+
+.btn.control[data-key="off"]:hover {
+    background-color: darkred;
+}
+
+.btn.control[data-key="ans"]:hover {
+    background-color: darkpurple;
+}
+
+.off .btn {
+    box-shadow: none;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.off .btn.control[data-key="on"] {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.off .display span {
+    content: 'Power Off';
+}
